@@ -1,5 +1,7 @@
 # 職務経歴書
 
+-----
+
 ## 基本情報
 
 |key|value|
@@ -8,6 +10,8 @@
 |生年| 1991年 |
 |居住地| 東京都杉並区 |
 |最終学歴| 慶應義塾大学大学院 理工学部 情報工学科 |
+
+-----
 
 ## 各種アカウント
 
@@ -18,13 +22,17 @@
 |Twitter|[@momotaro98_](https://twitter.com/momotaro98_)|
 |Speaker Deck|[momotaro98](https://speakerdeck.com/momotaro98)|
 
+-----
+
 ## 自己PR
 
-- プロダクトにおける要件定義・設計・開発・構築・運用のすべてを過去2つの職歴とも経験している。
+- システムプロダクトにおける要件定義・設計・開発・構築・運用のフローを過去2つの職歴とも経験している。
 - 英語を使った業務経験を過去2つの職歴とも経験している。
-- 組織設計・リーンアジャイル手法といったエンジニアリングマネジメントへの関心が高い。
-- Qiita,技術ブロクに継続的に投稿している。
+- Qiita,技術ブロクへ継続的に技術に関する記事を投稿している。
 - OSSへのコントリビュートを継続的に行っている。
+- 組織設計・リーンアジャイル手法といったエンジニアリングマネジメントへの関心が高い。
+
+-----
 
 ## スキル
 
@@ -51,15 +59,19 @@
   - Ticket management (JIRA/Trello/Backlog)
   - Document management (Confluence/GoogleDoc/Notion)
 
-## 今後やっていきたいロール/伸ばしたいスキル
+-----
 
-- SRE / DevOpsエンジニア
-  − [Four Keys](https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance)などのビジネス貢献に関わる指標の可視化と開発チームへの改善仕組み提供。
-  - プロダクトの非機能品質(パフォーマンス、セキュリティ、可用性、等)の向上への貢献。
-- エンジニアリングマネージャー
-  - 開発者体験の向上プロセスの設計・作成
-  - Lean開発・フロー効率性を向上させるための組織設計、仕組みづくり
-  - 優れたチームを築き上げるためのコーチング、採用
+## 今後やっていきたいロール / 伸ばしたいスキル
+
+* SRE / DevOps エンジニア
+  * [Four Keys](https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance)などのビジネス貢献に関わる指標の可視化と開発チームへの改善仕組み提供。
+  * プロダクトの非機能品質(パフォーマンス、セキュリティ、可用性、等)の向上への貢献。
+* エンジニアリングマネージャー
+  * 開発者体験の向上プロセスの設計・作成
+  * Lean開発・フロー効率性を向上させるための組織設計、仕組みづくり
+  * 優れたチームを築き上げるためのコーチング、採用
+
+-----
 
 ## 職務経歴詳細
 
@@ -81,14 +93,14 @@
 検索サービスAPIのデータベースにはElasticsearchとRedisを採用、実装にはGo言語を採用しました。技術的な課題として、レッスン検索と講師検索というビジネス要件のためにElasticsearchでのデータスキーマをどのように持つか、どのように過去レッスンとして検索対象にならないようにするか、ElasticsearchのインデックスのMapping変更をどのように実現するか、などがありどれもひとつひとつ解決していきました。
 
 - 利用した技術スタック
-  - Go、SAM、Lambda、Redis(ElastiCache)、Elasticsearch(OpenSearch)、SQS、MySQL(RDS AuroraDB)、API Gateway、VPC Endpoint、GitLab CI。
+  - Go、SAM、Lambda、Redis(ElastiCache)、Elasticsearch(OpenSearch)、SQS、MySQL(RDS AuroraDB)、API Gateway、VPC Endpoint、GitLab CI
 
 **レッスン基盤サービスAPI開発**
 
 レアジョブ社のサービスにて共通で存在するレッスン・カウンセリングの予約管理共通基盤サービスの開発・運用を担当していました。既存機能の要件定義とDBスキーマ変更、既存インフラからインフラコード(CloudFormation)を使ったインフラへの変更対応、負荷試験を新規に仕組み化し実施、CICDを既存の複雑な状態のものからAWS CodePipeline、CodeDeployを利用し改善するタスクを自ら提案し実施しました。
 
 - 利用した技術スタック
-  - Go、ECS(Fargate)、ALB、MySQL(RDS AuroraDB)、API Gateway、GitLab CI、CodePipeline、CodeDeploy、CloudFormation。
+  - Go、ECS(Fargate)、ALB、MySQL(RDS AuroraDB)、API Gateway、GitLab CI、CodePipeline、CodeDeploy、CloudFormation
 
 **レッスンデータの新規システムへのマイグレーションとデータ同期**
 
@@ -118,7 +130,7 @@ ECサイト店舗向け受注管理システムの開発を担当。
 
 また、日本語が不得意なエンジニアのパートナースタッフメンバーとは、英語を使ったコミュニケーションでプロパー社員としてプロジェクトとタスクをマネジメント業務を在籍期間の最後1年間は実施していました。
 
-**より詳細な内容は以下のブログ記事を参照ください。**
+**より詳細な内容は以下のブログ記事を参照ください**
 
 https://ochataro.hateblo.jp/entry/2019/10/31/152634
 
@@ -132,7 +144,30 @@ https://ochataro.hateblo.jp/entry/2019/10/31/152634
   - GitHub URL 
     - バックエンドAPI (Go): https://github.com/momotaro98/mixlunch-service-apis
     - BFF API (Node.js): https://github.com/momotaro98/mixlunch-bff-apis
+  - 技術スタック
+    - Go, JavaScript(Node.js), Python, AWS ECS(EC2)、MySQL(RDS)、TypeScript、Vue.js
 
 -----
 
 ### 大学・大学院での研究 2014/04 ~ 2017/03
+
+[研究内容2] 機械学習モデルを利用した快適度フィードバックからの空調機の自動制御システムの研究
+
+家庭内の空調機制御における省エネと快適さの両立を目指す最適化アルゴリズムの研究をしていました。
+研究の中ではIoTデバイスを用いて実際に家庭に協力いただき実証実験を行いました。その中で研究論文作成までの長期的な計画を設定しリスクに備えた準備を行うスキルを身に着けました。また、課題にぶつかった際に仲間や先輩に上手くアドバイスを教えてもらうことの重要性を学びました。
+
+- 学んだ内容
+  - 情報工学(ネットワーク、データベース)
+  - ソフトウェア設計と実装スキル
+  - 機械学習モデル(決定木)の応用
+
+[研究内容1] HEMS(Home Energy Management System)サービスのためのニューラルネットワークを用いた家庭電力データ特徴量抽出の研究
+
+家庭におけるスマートメーターから得られる総電力データにおいて空調機やその他家電の電力データ特徴量をニューラルネットワークによって抽出することを試みる研究をしていました。
+研究の中で既存の研究内容を読み解き理解する力、新規性を自ら論理的に構築する力、課題を自ら定めて解決方法を提案する力を養うことができました。
+
+- 学んだ内容
+  - システムデザイン工学
+  - コンピュータサイエンス全般
+  - 機械学習とその利用技術
+  - スマートグリッド・スマートコミュニティ分野・技術
