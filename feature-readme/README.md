@@ -1,4 +1,10 @@
-## Init
+## Status
+
+[![textlint](https://img.shields.io/github/workflow/status/momotaro98/resume/lint%20text?label=textlint&logo=github)](https://github.com/momotaro98/resume/actions?query=workflow%3A%22lint+text%22)
+[![build pdf](https://img.shields.io/github/workflow/status/momotaro98/resume/build%20pdf?label=build%20pdf&logo=github&color=blue)](https://github.com/momotaro98/resume/actions?query=workflow%3A%22build+pdf%22)
+
+
+## Setting up
 
 ```
 npm install
