@@ -49,7 +49,7 @@
 |Redis| 3年 | Cluster on AWS ElastiCache |
 |Elasticsearch| 3年 | Cluster on AWS OpenSearch |
 |AWS| 3年 | CloudWatch/SNS/IAM/CloudFormation/CodePipeline/Deploy/Build/Route53/S3/API Gateway/Lambda/ALB/ECS Fargate/Aurora DB/SQS/OpenSearch/DynamoDB/ElastiCache/Batch/Beanstalk/Kinesis |
-|Azure| 1年 | Azure Functions/Table Strage/Queue Storage/Cosmos DB |
+|Azure| 1年 | Azure Functions/Table Storage/Queue Storage/Cosmos DB |
 |Firebase| 1年 | Auth/Storage/Site |
 |Terraform| 1年 | |
 |Ansible| 1年 | |
