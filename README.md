@@ -26,8 +26,8 @@
 ## 自己PR
 
 - プロダクト開発にて要件定義、設計、開発、構築、運用を通して担うことを過去2つの職歴とも経験している
-- 業務にてチームメイトと英会話でコミュニケーションすることを過去2つの職歴とも経験している
-- Qiita、技術ブロクへの投稿や[ISUCON](https://isucon.net/)への参加を通して継続的な学習をしている
+- 業務でのチームメイトとの英会話コミュニケーションを過去2つの職歴とも経験している
+- 技術記事の投稿や[ISUCON](https://isucon.net/)への参加を通して継続的な学習をしている
 - OSSへのコントリビュートを継続的に行っている
 - 組織文化、開発者体験、リーン、アジャイルといったエンジニアリングマネジメントへの関心が高い
 
@@ -49,8 +49,8 @@
 |Redis| 3年 | Cluster on AWS ElastiCache |
 |Elasticsearch| 3年 | Cluster on AWS OpenSearch |
 |AWS| 3年 | CloudWatch/SNS/IAM/CloudFormation/CodePipeline/Deploy/Build/Route53/S3/API Gateway/Lambda/ALB/ECS Fargate/Aurora DB/SQS/OpenSearch/DynamoDB/ElastiCache/Batch/Beanstalk/Kinesis |
-|Azure| 1年 | Azure Functions/Table Strage/Queue Strage/Cosmos DB |
-|Firebase| 1年 | Auth/Strage/Site |
+|Azure| 1年 | Azure Functions/Table Strage/Queue Storage/Cosmos DB |
+|Firebase| 1年 | Auth/Storage/Site |
 |Terraform| 1年 | |
 |Ansible| 1年 | |
 
@@ -91,7 +91,7 @@
 * 既存の業務仕様が不明確で仕様を決めることができない
 
 [担当範囲]   
-その解決のため、新規にマイクロサービスとして検索サービスAPIを切り出す意思決定を組織で行い、その設計、実装、構築、運用すべてに責任を持ち目的を達成することに貢献した。  
+その解決のため、新規にマイクロサービスとして検索サービスAPIを切り出す意思決定を組織で行い、その設計、実装、構築、運用すべてに責任を持ち業務課題解決の目的を達成することに貢献した。  
 [進め方]  
 検索サービスはレッスンドメイン、講師ドメイン、生徒ドメイン、と複雑な3つのドメインが交わるサービスだった。様々な社内のチームと協調し明らかになった仕様を都度ドキュメント化しながら進めた。業務委託のメンバーに対して背景と仕様の説明をしながらペアプロで実装することによりタスクの効率化を図った。  
 [採用技術]  
@@ -101,18 +101,13 @@
 * レッスン検索、講師検索、ブックマーク講師検索という異なった仕様の検索画面それぞれへ対応させるためにElasticsearchとRedisでデータスキーマをどのように持つか
 * 既存モノリスDBとデータを同期させながら各ドメインのデータをどのように新規検索サービスDBへ連携させるか
 * 負荷軽減のため過去のレッスンを検索対象とさせないためにどのような設計とするか
+* Elasticsearchのクラスター構成、シャード数はどう決定するか
 * 既存で作成済みのElasticsearchのインデックスのMapping変更をどのように実現するか
 * SQSのスタンダードキューからHigh Throughput FIFOキューへどのように移行するか
 
-[結果と振り返り]  
-プロトタイプ作成から開始し最終的なリリースまでにスケジュール変更を要したが業務課題を解決し目標を達成できた。  
-プロジェクトの振り返りとして以下が反省点と良かった点であった。
-* 反省点： 検索機能が予想以上に複雑で関連チームの洗い出しが不足していたこと
-* 良かった点： プロジェクトの途中でレイヤーごとの既存チームを横断した検索機能フィーチャーチームを作りコミュニケーションを円滑にする改善ができたこと
-
-- **利用した技術スタック**
-  - Go、SAM、Lambda、Redis(ElastiCache)、Elasticsearch(OpenSearch)、SQS、MySQL(RDS AuroraDB)
-  - API Gateway、AWS Beanstalk、VPC Endpoint、GitLab CI
+*利用した技術スタック*
+- Go、SAM、Lambda、Redis(ElastiCache)、Elasticsearch(OpenSearch)、SQS、MySQL(RDS AuroraDB)
+- API Gateway、AWS Beanstalk、VPC Endpoint、GitLab CI
 
 **レッスン基盤サービスAPI開発**
 
@@ -125,26 +120,26 @@
 * 実施記録が曖昧になっていた負荷試験の実行方法とレポートフォーマットを仕組み化
 * アプリケーションログ形式改善、各種メトリクスの可視化ダッシュボード作成、それらのアラート設定対応
 
-- **利用した技術スタック**
-  - Go、ECS(Fargate)、ALB、MySQL(RDS AuroraDB)、API Gateway、GitLab CI、CodePipeline、CodeDeploy、CloudFormation
+*利用した技術スタック*
+- Go、ECS(Fargate)、ALB、MySQL(RDS AuroraDB)、API Gateway、GitLab CI、CodePipeline、CodeDeploy、CloudFormation
 
 **決済基盤サービス/決済系バックオフィスツール開発**
 
 [業務課題]  
 * 社内のどのプロダクトでも利用できる共通決済機能を持つAPIが存在せず将来的な機能重複の無駄が存在していた
-* ユーザーの決済機能と決済情報管理のバックオフィスツールにおいて既存のモノリシックシステムに依存しているために改善のスピードが下がっていた
-* 既存のシステムが特定の決済代行サービスに依存し変更が柔軟にできない状態になっていた
+* 既存システムの決済情報管理機能はユーザー作業時間が長くかかり、かつ修正を加えるのが難しい状態になっていた
+* 既存システムは特定の決済代行サービスに依存していた
 
 [担当範囲]   
-共通決済基盤サービスの開発運用に携わった。返金対応などのユーザーの決済に関わるバックオフィス業務用ツールの新規開発に対応するための機能の拡張を担当。また、共通基盤サービスとして既存にある認証認可システムにおいてバックオフィスツールを利用する社内ユーザーのみが利用できるように機能を設計、実装担当した。開発にあたり、社内で利用している決済代行サービスのシステム仕様をドキュメントを読み込むことで把握し既存の不具合修正も実施した。
+共通決済基盤サービスの開発運用に携わった。返金対応などのユーザーの決済に関わるバックオフィス業務用ツールの新規開発に対応するための機能の拡張を担当。また、共通基盤サービスの認証認可システムにおいてバックオフィスツールを利用する社内ユーザーのみが利用できるように機能を設計、実装担当した。開発にあたり、決済代行サービスのシステム仕様を読み込むことで共通決済基盤サービスの問題点を把握し不具合修正も実施した。
 
 [技術的課題]  
 * 特定の決済代行サービスに依存しない形で決済データモデルをどのように抽象化設計するか
 * 一般ユーザーと管理者ユーザーを区別するアクセス制御をどのように設計するか
 * 月時支払実行の負荷をどのように軽減させる設計にするか
 
-- **利用した技術スタック**
-  - Go、ECS(Fargate)、ALB、MySQL(RDS AuroraDB)、API Gateway、GitLab CI、CodePipeline、CodeDeploy、CloudFormation
+*利用した技術スタック*
+- Go、ECS(Fargate)、ALB、MySQL(RDS AuroraDB)、API Gateway、GitLab CI、CodePipeline、CodeDeploy、CloudFormation
 
 -----
 
@@ -164,6 +159,9 @@
 
 https://ochataro.hateblo.jp/entry/2019/10/31/152634
 
+*利用した技術スタック*
+- C#、JavaScript、.NET Framework、Windows Server、SQLServer、Azure Functions
+
 -----
 
 ### 副業
@@ -175,3 +173,6 @@ https://ochataro.hateblo.jp/entry/2019/10/31/152634
     - BFF API (Node.js): https://github.com/momotaro98/mixlunch-bff-apis
   - その他
     - ランチメイトのマッチングバッチはPythonで機械学習モデル利用を想定し実装。(ソースコードは非公開）
+
+*利用した技術スタック*
+- Go、JavaScript(Node.js)、Python、Vue.js、Firebase Auth、Storage、AWS RDS(MySQL)、ECS、ALB
