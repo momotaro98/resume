@@ -5,6 +5,7 @@
   "scripts": {
     "postinstall": "git config core.hooksPath ./git-hooks",
     "build:pdf": "cat README.md | md-to-pdf --config-file ./pdf-configs/config.js > resume.pdf",
+    "build:pdf-en": "cat README-en.md | md-to-pdf --config-file ./pdf-configs/config.js > cv-en.pdf",
     "lint": "textlint README.md",
     "fix-lint": "textlint --fix README.md"
   },
