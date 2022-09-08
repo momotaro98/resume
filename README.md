@@ -53,11 +53,7 @@
 |Firebase| 1年 | Auth/Storage/Site |
 |Terraform| 1年 | |
 |Ansible| 1年 | |
-
-### ツール、その他
-  - CI/CD (TeamCity/Jenkins/CircleCI/GitLabCI/GitHub Actions)
-  - Ticket management (JIRA/Trello/Backlog)
-  - Document management (Confluence/GoogleDoc/Notion)
+|CI/CD tools| 4年 | TeamCity/Jenkins/CircleCI/GitLabCI/GitHub Actions |
 
 -----
 
