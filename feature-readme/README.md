@@ -51,6 +51,6 @@ $ git push origin --tags
 
 GitHub Actionsのschedule triggerで定期的に職務経歴書の内容更新を促すissueが自動生成される。
 
-期間の変更、Jobの停止は[.github/workflows/create-issue.yml](../.github/workflows/create-issue.yml)で編集できる。
+Issue発行の頻度変更、Job停止は[.github/workflows/create-issue.yml](../.github/workflows/create-issue.yml)で編集できる。
 
-issueの内容は[.github/ISSUE_TEMPLATE.md](../.github/ISSUE_TEMPLATE.md)で編集できる。
+Issue内容は[.github/ISSUE_TEMPLATE.md](../.github/ISSUE_TEMPLATE.md)で編集できる。

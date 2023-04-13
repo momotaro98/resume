@@ -37,7 +37,7 @@
 
 |名前| 経験年数 |備考|
 |---|-----|---|
-|Go| 4年 | WebApp, CLI, Library |
+|Go| 5年 | WebApp, CLI, Library |
 |C#| 3年 | .NET Framework |
 |JavaScript| 2年 | Node.js/jQuery |
 |TypeScript| 1年 | AWS CDK |
@@ -45,13 +45,15 @@
 |MySQL| 3年 | |
 |SQLServer| 2年 | |
 |Redis| 3年 | Cluster on AWS ElastiCache |
-|Elasticsearch| 3年 | Cluster on AWS OpenSearch |
+|Elastic| 3年 | Elasticsearch/Kibana/Beats/APM |
+|Vault| 1年 |  |
+|Kubernetes| 1年 |  |
+|Istio| 1年 |  |
 |AWS| 3年 | CloudWatch/SNS/IAM/CloudFormation/CodePipeline/Deploy/Build/Route53/S3/API Gateway/Lambda/ALB/ECS Fargate/Aurora DB/SQS/OpenSearch/DynamoDB/ElastiCache/Batch/Beanstalk/Kinesis |
 |Azure| 1年 | Azure Functions/Table Storage/Queue Storage/Cosmos DB |
-|Firebase| 1年 | Auth/Storage/Site |
-|Terraform| 1年 | |
-|Ansible| 1年 | |
-|CI/CD tools| 4年 | TeamCity/Jenkins/CircleCI/GitLabCI/GitHub Actions |
+|Terraform| 2年 | |
+|Ansible| 2年 | |
+|CI/CD tools| 5年 | TeamCity/Jenkins/CircleCI/GitLabCI/GitHub Actions |
 
 -----
 
@@ -61,7 +63,18 @@
 
 #### 概要
 
-SREのロールを担当している。
+銀行サービス設立プロジェクトにジョイン。SREチームメンバーとして各種SREチーム管理コンポーネントの改善業務を担当した。
+
+#### 詳細
+
+* アラートシステム可用性向上対応
+* クライアント証明書生成改善
+* Istio IngressGateway Ratelimitレスポンスのカスタマイズ化
+* K8sクラスタ構築のTerraform化
+* Go製内製ツール改善
+
+*利用した技術スタック*
+- Go、Kubernetes、Istio、Elastic(search, Kibana, Beats)、Vault、Ansible、Terraform
 
 ### 株式会社レアジョブ: 2019/11 ~ 2022/11
 
